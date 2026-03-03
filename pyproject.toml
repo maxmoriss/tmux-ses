@@ -1,0 +1,11 @@
+[project]
+name = "tmux-ses"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+[project.scripts]
+tmux-ses = "tmux_ses:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

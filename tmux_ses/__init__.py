@@ -28,7 +28,7 @@ def main():
     run(["tmux", "new-session", "-d", "-s", session_name, "-c", directory])
 
     run(["tmux", "new-window", "-t", session_name, "-c", directory, "-n", "AI"])
-    run(["tmux", "send-keys", "-t", f"{session_name}:AI", "claude", "Enter"])
+    run(["tmux", "send-keys", "-t", f"{session_name}:AI", f"claude -n {session_name}", "Enter"])
 
     run(["tmux", "new-window", "-t", session_name, "-c", directory, "-n", "vim"])
     run(["tmux", "send-keys", "-t", f"{session_name}:vim", "nvim .", "Enter"])
